@@ -1,23 +1,30 @@
 
 # iOS Manual Installation
 
-- `npm install react-native-background-geolocation --save`
+```
+npm install react-native-background-geolocation --save
+npm install cocoa-lumberjack --save
+```
 
 - In the XCode's **`Project navigator`**, right click on project's name ➜ **`Add Files to <...>`**
 ![](https://www.dropbox.com/s/nmih1sc9hgygpvu/react-native-background-geolocation-install-1.png?dl=1)
 
-- Add **`node_modules/react-native-background-geolocation/ios/RNBackgroundGeolocation.xcodeproj`** 
+- Add **1st of 3** Libraries: `node_modules/react-native-background-geolocation/ios/RNBackgroundGeolocation.xcodeproj`** 
 ![](https://www.dropbox.com/s/5rscl79kbrctouq/react-native-background-geolocation-install-2.png?dl=1)
 
-- Add another project:  **`node_modules/react-native-background-fetch/ios/RNBackgroundFetch.xcodeproj`** 
+- Add **2nd of 3** Libraries:  **`node_modules/react-native-background-fetch/ios/RNBackgroundFetch.xcodeproj`** 
 ![](https://dl.dropboxusercontent.com/u/2319755/react-native-background-fetch/INSTALL/step3.png?dl=1)
+
+- Add a **3rd of 3** Libraries: **`node_modules/cocoa-lumberjack/CocoaLumberjack/Lumberjack.xcodeproj`**
+~[](https://www.dropbox.com/s/je32dav33o6clk8/Screenshot%202016-11-01%2016.58.25.png?dl=1)
 
 ## Build Phases ➜ Link Binary With Libraries
 
 - Select your project in the **`Project navigator`**. Click **`Build Phases`** then **`Link Binary With Libraries`**. Add the following **2** static libraries: 
     - **`libRNBackgroundGeolocation.a`**
     - **`libRNBackgroundFetch.a`**.
-![](https://www.dropbox.com/s/qky6jxaogngiaor/Screenshot%202016-09-22%2012.04.28.png?dl=1)
+    - **`libCocoaLumberjack.a`**
+![](https://www.dropbox.com/s/6kbkn69csnj4mrm/Screenshot%202016-11-01%2017.03.27.png?dl=1)
 
 - Add the following Cocoa framework dependency to your target's `Link Binary With Libraries` build phase:
     - **`libsqlite3.tbd`**
